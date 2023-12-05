@@ -113,7 +113,7 @@ public class RequestController {
         if (request.get().getSender().getId()!=currentSender.getId()){
             return ResponseEntity.ok(new MessageResponse("This request does not belong to you!"));
         }
-        return ResponseEntity.ok(request);
+        return ResponseEntity.ok(request.get());
     }
 
     @GetMapping("/requests")
